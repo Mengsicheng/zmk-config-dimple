@@ -27,24 +27,28 @@
                 <&macro_release>,
                 <&kp RCTRL>;
         };
+
         M1: M1 {
             compatible = "zmk,behavior-macro";
             label = "M1";
             #binding-cells = <0>;
             bindings = <&kp L &kp A &kp N &kp R &kp U &kp M &kp E &kp N &kp G>;
         };
+
         M2: M2 {
             compatible = "zmk,behavior-macro";
             label = "M2";
             #binding-cells = <0>;
             bindings = <&kp LS(M) &kp S &kp C &kp N5 &kp N8 &kp N7 &kp N0 &kp N7 &kp N0 &kp N2 &kp M &kp W>;
         };
+
         M3: M3 {
             compatible = "zmk,behavior-macro";
             label = "M3";
             #binding-cells = <0>;
             bindings = <&kp N5 &kp N8 &kp N7 &kp N0 &kp N7 &kp N0 &kp N2 &kp M &kp S &kp C>;
         };
+
         M4: M4 {
             compatible = "zmk,behavior-macro";
             label = "M4";
@@ -57,81 +61,73 @@
         Fs: Fs {
             compatible = "zmk,behavior-hold-tap";
             label = "FS";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <16>;
         };
+
         Js: Js {
             compatible = "zmk,behavior-hold-tap";
             label = "JS";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <18>;
         };
+
         Zs: Zs {
             compatible = "zmk,behavior-hold-tap";
             label = "ZS";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <24>;
         };
+
         Na: Na {
             compatible = "zmk,behavior-hold-tap";
             label = "NA";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <30>;
             tapping-term-ms = <180>;
         };
+
         Mc: Mc {
             compatible = "zmk,behavior-hold-tap";
             label = "MC";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <31>;
         };
+
         Bs: Bs {
             compatible = "zmk,behavior-hold-tap";
             label = "BS";
-            bindings =
-                <&M0>,
-                <&kp>;
+            bindings = <&M0>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <34>;
         };
+
         td: td {
             compatible = "zmk,behavior-tap-dance";
             label = "TD";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_SHIFT>,
-                <&kp F>;
+            bindings = <&kp LEFT_SHIFT>, <&kp F>;
 
             tapping-term-ms = <180>;
         };
@@ -142,37 +138,37 @@
 
         default_layer {
             bindings = <
-   &lt 2 ESC             &kp Q    &kp W         &kp E             &kp R    &kp T            &kp Y                &kp U     &kp I     &kp O          &kp P   &kp BSPC
-&kp LEFT_GUI             &kp A    &kp S         &kp D  &Fs LEFT_SHIFT F  &lt 2 G          &lt 3 H         &Js LSHIFT J     &kp K     &kp L       &kp SEMI  &kp ENTER
-   &kp LSHFT  &Zs LEFT_SHIFT Z    &kp X         &kp C             &kp V    &kp B   &Na LEFT_ALT N  &Mc RIGHT_CONTROL M     &mo 0    &kp UP  &kp RC(SPACE)
-       &none                    &kp ESC  &kp LEFT_WIN       &lt 1 SPACE           &lt 3 BACKSPACE             &kp LEFT  &kp DOWN  &kp DOWN
+&lt 2 ESC     &kp Q             &kp W         &kp E             &kp R             &kp T    &kp Y            &kp U                &kp I     &kp O     &kp P          &kp BSPC
+&kp LEFT_GUI  &kp A             &kp S         &kp D             &Fs LEFT_SHIFT F  &lt 2 G  &lt 3 H          &Js LSHIFT J         &kp K     &kp L     &kp SEMI       &kp ENTER
+&kp LSHFT     &Zs LEFT_SHIFT Z  &kp X         &kp C             &kp V             &kp B    &Na LEFT_ALT N   &Mc RIGHT_CONTROL M  &mo 0     &kp UP    &kp RC(SPACE)
+&none                           &mt LGUI ESC  &mt LC(LGUI) ESC  &lt 1 SPACE                &lt 3 BACKSPACE  &kp LEFT             &kp DOWN  &kp DOWN
             >;
         };
 
         lower_layer {
             bindings = <
- &kp GRAVE  &kp NUMBER_1        &kp N2       &kp N3  &kp N4  &kp N5         &kp N6    &kp N7     &kp N8      &kp N9  &kp N0  &none
-   &kp TAB  &kp C_VOL_DN  &kp C_VOL_UP        &none  &trans   &none       &kp LEFT    &kp UP   &kp DOWN   &kp RIGHT   &none  &none
-    &trans        &trans         &none        &none   &none   &none      &kp COLON  &kp SEMI  &kp COMMA  &kp PERIOD   &none
-&bt BT_CLR                  &sys_reset  &bootloader  &trans          &kp BACKSLASH  &kp PIPE     &trans       &none
+&kp GRAVE   &kp NUMBER_1  &kp N2        &kp N3       &kp N4  &kp N5  &kp N6         &kp N7    &kp N8     &kp N9      &kp N0  &none
+&kp TAB     &kp C_VOL_DN  &kp C_VOL_UP  &none        &trans  &none   &kp LEFT       &kp UP    &kp DOWN   &kp RIGHT   &none   &none
+&trans      &trans        &none         &none        &none   &none   &kp COLON      &kp SEMI  &kp COMMA  &kp PERIOD  &none
+&bt BT_CLR                &sys_reset    &bootloader  &trans          &kp BACKSLASH  &kp PIPE  &trans     &none
             >;
         };
 
         raise_layer {
             bindings = <
- &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET    &kp AMPS          &kp STAR           &kp LPAR           &kp RPAR  &none
- &none    &kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6       &none             &none   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
-&trans    &kp F7  &kp F8    &kp F9   &kp F10    &kp F11    &kp F12  &kp C_MUTE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES             &trans
- &none            &trans    &trans     &none                 &none   &kp GRAVE         &kp TILDE              &none
+&none   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS    &kp STAR          &kp LPAR           &kp RPAR           &none
+&none   &kp F1    &kp F2  &kp F3    &kp F4    &kp F5     &kp F6     &none       &none             &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &none
+&trans  &kp F7    &kp F8  &kp F9    &kp F10   &kp F11    &kp F12    &kp C_MUTE  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &trans
+&none             &trans  &trans    &none                &none      &kp GRAVE   &kp TILDE         &none
             >;
         };
 
         control_layer {
             bindings = <
-       &kp PLUS      &none      &none   &none  &none   &none      &none         &none          &none             &none            &none  &none
-      &kp MINUS  &kp UNDER      &none  &trans  &none   &none      &none         &none          &none    &kp LEFT_BRACE  &kp RIGHT_BRACE  &none
-&kp KP_MULTIPLY        &M1        &M2     &M3    &M4  &trans  &kp SLASH  &kp QUESTION  &kp LESS_THAN  &kp GREATER_THAN            &none
-      &kp SLASH             &kp EQUAL   &none  &none              &none  &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2
+&kp PLUS         &none      &none      &none   &none  &none   &none      &none         &none          &none             &none            &none
+&kp MINUS        &kp UNDER  &none      &trans  &none  &none   &none      &none         &none          &kp LEFT_BRACE    &kp RIGHT_BRACE  &none
+&kp KP_MULTIPLY  &M1        &M2        &M3     &M4    &trans  &kp SLASH  &kp QUESTION  &kp LESS_THAN  &kp GREATER_THAN  &none
+&kp SLASH                   &kp EQUAL  &none   &none          &none      &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2
             >;
         };
     };
